@@ -1,0 +1,123 @@
+body {
+	font-family: 'Mostery';
+	background-color: rgb(0, 0, 0);
+}
+
+p {
+	font-size:14px;
+	color:rgb(228, 228, 228);
+	font-weight:bolder;
+	line-height:25px;
+	font-family: 'open_sansregular';
+}
+h2 {
+	color:#E0E0E0;
+	font-size:35px;
+	text-transform:uppercase;
+	font-weight:bolder;
+}
+h3 {
+	color:#BFBFBF;
+	font-size:23px;
+}
+h4 {
+	color:#E0E0E0;
+	font-size:21px;
+	text-transform:uppercase;
+}
+h5 {
+	color:#BFBFBF;
+	font-size:18px;
+}
+.heading p {
+	padding:20px 0px;
+	font-size:14px;
+	font-weight:bolder;
+	color:#BFBFBF;
+}
+#valores {
+	text-align:center;
+	padding:2% 0%;
+	background-color: #282828;
+}
+.cardn {
+	display: grid;
+	
+	grid-template-columns: 100%;
+	grid-template-rows: 13vw 15.5vw;
+	grid-template-areas: "image" "text" ;
+  
+	border-radius: 18px;
+	background: rgb(76, 76, 76);
+	box-shadow: 5px 5px 15px rgba(69, 69, 69, 0.9);
+	font-family: roboto;
+	text-align: center;
+	transform-style: preserve-3d;
+	perspective: 1000px;
+	overflow: hidden;
+  }
+.cardn-text p {
+	padding-left: 1vw;
+	padding-right: 1vw;
+	color: rgb(255, 255, 255);
+
+}
+
+#convergentes .nav-tabs > li.active > a, #features .nav-tabs > li.active > a:hover, #features .nav-tabs > li.active > a:focus {
+	box-shadow: 0 1px 4px rgba(0, 0, 0, .26);
+	border-bottom:2px solid #8EC5DA;
+	background:#383838;
+}
+#convergentes .nav-tabs > li > a {
+	color:#404040;
+	margin-right:0;
+	box-shadow: 0 1px 4px rgba(0, 0, 0, .26);
+	background-color: rgb(64, 64, 64);
+	border-right: 1px solid #282828;
+	border-radius:0px;
+	border-bottom:1px solid #000000;
+	width: 110px;
+	padding: 0;
+	height: 80px;
+	line-height: 80px;
+	font-size: 32px;
+}
+#convergentes .nav-tabs > li > a:hover {
+	border-color:transparent;
+	border-right: 1px solid #616161;
+}
+#clientes {
+	padding: 1% 0%;
+	background: #282828;
+	text-align:center;
+}
+.contact-sec-1 ul.contact-form li i.fa {
+	color:#F2F2F2;
+	float:left;
+	margin-right:10px;
+}
+.contact-sec-1 ul.contact-form li h6 {
+	font-size:14px;
+	color:#F2F2F2;
+	margin:0;
+}
+.contact-sec-1 ul li a {
+	color:#F2F2F2;
+}
+#footer-down h2 {
+	color:#D1D1D1;
+	margin:20px 0px 40px 0px;
+	text-transform:none;
+}
+#footer-down ul li a i.fa {
+	color:#E6E6E6;
+	font-size:22px;
+	border:2px solid #E6E6E6;
+	height:50px;
+	width:50px;
+	border-radius:50px;
+	padding:25%;
+}
+.vermas{
+    color:rgb(0, 0, 0)
+}
