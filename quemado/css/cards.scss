@@ -1,0 +1,137 @@
+@use '../base' as *;
+@use '_1_button-effects.scss' as *;
+
+/* -------------------------------- 
+
+File#: _2_card-v13
+Title: Card v13
+Descr: Container of information used as teaser for further content exploration
+Usage: codyhouse.co/license
+
+-------------------------------- */
+
+.card-v13 {
+  --transition-duration: .3s;
+}
+
+.card-v13__figure-wrapper {
+  display: block;
+}
+
+.card-v13__figure {
+  clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+
+  transition: clip-path var(--transition-duration) var(--ease-out);
+
+  img {
+    display: block;
+    width: 100%;
+    transform: scale(1.1);
+    filter: grayscale(100%);
+
+    transition: transform var(--transition-duration) var(--ease-out), filter var(--transition-duration);
+  }
+
+  .card-v13__figure-wrapper:hover & {
+    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+
+    img {
+      transform: scale(1);
+      filter: grayscale(0%);
+    }
+  }
+}
+
+.card-v13__separator {
+  display: block;
+  width: 40px;
+  height: 3px;
+  background-color: alpha(var(--color-contrast-higher), 0.1);
+}
+@use '../base' as *;
+@use '_1_social-sharing.scss' as *;
+
+/* -------------------------------- 
+
+File#: _2_sticky-sharebar
+Title: Sticky Sharebar
+Descr: Sticky social sharing bar
+Usage: codyhouse.co/license
+
+-------------------------------- */
+
+.sticky-sharebar {
+  display: flex;
+  align-items: center;
+  position: fixed;
+  height: 100%;
+  top: 0;
+  right: var(--space-md);
+  pointer-events: none;
+  z-index: var(--z-index-fixed-element, 10); 
+
+  transition: visibility 0s .3s, opacity .3s, transform .3s var(--ease-in-out);
+  transform: translateX(10%);
+  opacity: 0;
+  visibility: hidden;
+}
+
+
+.sticky-sharebar--on-target {
+  transition: visibility 0s, opacity .3s, transform .3s var(--ease-in-out);
+  transform: translateX(0);
+  opacity: 1;
+  visibility: visible;
+}
+
+.sticky-sharebar__list {
+  pointer-events: auto;
+  background-color: alpha(var(--color-bg-light), 0.95);
+  backdrop-filter: blur(5px);
+  border-radius: 50em;
+  box-shadow: var(--inner-glow), var(--shadow-md);
+  padding: 4px;
+}
+
+.sticky-sharebar__btn {
+  --size: 2.2em;
+  width: var(--size);
+  height: var(--size);
+
+  position: relative;
+  display: flex;
+  border-radius: 50%;
+  
+  .icon {
+    position: relative;
+    color: var(--color-contrast-medium); /* icon color */
+    display: block;
+    margin: auto;
+    z-index: 2;
+    transition: color .2s;
+  }
+
+  &::before { /* animated bg */
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    border-radius: inherit;
+    background-color: alpha(var(--color-contrast-higher), 0.1);
+    transform: scale(0);
+    transition: transform .2s var(--ease-out);
+  }
+
+  &:hover {
+    .icon {
+      color: var(--color-contrast-higher);
+    }
+
+    &::before {
+      transform: scale(1);
+    }
+  }
+}
